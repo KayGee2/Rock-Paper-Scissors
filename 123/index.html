@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rock Paper Scissors</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="mainnav">
+    <BUTTON class ="btn" onclick="go('game')">Play</a></BUTTON><br><br>
+    <button onclick="go('howto')"> How to Play</a></button><br><br>
+    <button onclick="go('credits')">credits</a></button>
+  </nav>
+</header>
+
+<main>
+
+  <section class="screen" id="screen-landing">
+    <div class="hero">
+      <div class="hero-icons">
+      </div>
+
+      <h1>Ching... Chong...<br>CHAH!!!</h1>
+      <p>One throw decides it. LETS PLAY!!</p>
+      <BUTTON class="btn" onclick="go('game')"> ▶ Play a round</button>
+      <div class="hero-links">
+        <button onclick="go('howto')">How it works</button>
+        <button onclick="go('credits')">Credits</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section class="screen" id="screen-game">
+    <div class="scoreboard">
+      <div class="score"><div class="num" id="playerScore">0</div><div class="label">You</div></div>
+      <div class="score-sep"></div>
+      <div class="score"><div class="num" id="roundCount">0</div><div class="label">Rounds</div></div>
+      <div class="score-sep"></div>
+      <div class="score"><div class="num" id="opponentScore">0</div><div class="label">CPU</div></div>
+    </div>
+
+    <div class="arena">
+
+      <div class="arena-hands">
+
+        <div class="hand-slot" id="playerHand">
+        </div>
+        <span class="vs-label">VS</span>
+        <div class="hand-slot" id="opponentHand"></div>
+      </div>
+      <div class="result" id="resultMessage">Choose your throw</div>
+
+      <div class="throws">
+        <button class="throw" data-choice="rock" onclick="playGame('rock')">
+          <span>Rock</span>
+        </button>
+        <button class="throw" data-choice="paper" onclick="playGame('paper')">
+          <span>Paper</span>
+        </button>
+        <button class="throw" data-choice="scissors" onclick="playGame('scissors')">
+          <span>Scissors</span>
+        </button>
+      </div>
+
+      <div class="reset-row"><button class="btn ghost" onclick="resetGame()">Reset match</button></div>
+    </div>
+  </section>
+
+  <!-- HOW TO PLAY -->
+  <section class="screen howto" id="screen-howto">
+    <h2>How it works</h2>
+    <p class="intro">Rules:</p>
+  <p>🗿 Vs 📄</p>
+  <p><b>ROCK</b> Vs <b>PAPER</b> = <b>PAPER WINS!!</b></p>
+   <p>Reason: <b>PAPER</b> can ONLY cover <b>ROCK</b>.</p>
+
+   <br>
+   <br>
+   <p>🗿 Vs ✂</p>
+   <p><b>ROCK</b> Vs <b>SCISSORS</b> = <b>ROCK</b> WINS!!</p>
+   <p>Reason: <b>ROCK</b> can ONLY smashes <b>SCISSORS</b>.</p>
+   <br>
+   <br>
+   <p>✂ Vs 📄</p>
+   <p><b>SCISSORS</b> Vs <b>PAPER</b> = <b>SCISSORS</b> WINS!!</p>
+   <p>Reason: <b>SCISSORS</b> can ONLY Cut <b>PAPER</b></p><br>
+
+
+    
+
+    
+
+    <p class="draw-note">Same throw twice? <strong>It's a draw</strong> — go again.</p>
+
+    <div class="howto-cta">
+      <button class="btn" onclick="go('game')">Return to the game</button>
+    </div>
+  </section>
+
+  <!-- CREDITS -->
+  <section class="screen credits" id="screen-credits">
+    <h2>Credits</h2>
+    <ul class="credit-list">
+      <li><span>Design &amp; build</span><span class="role">by Kagisho Madigwe on backend &amp; Claude on styling </span></li>
+      <li><span>Typefaces</span><span class="role">Space Grotesk, Source Serif 4</span></li>
+      <li><span>Icons</span><span class="role"> by Luna</span></li>
+    </ul>
+
+    <div class="donate">
+      <h3>Like the game?</h3>
+      <p>It's free to play and always will be. <br><br>If you'd like to support you can donate to us to help the families of the women who where tragically passed away by the series of unsolved murders this month.<br><br><b>Your Donation Would mean A Lot To Them.</b></p>
+      <a class="btn" href="#" onclick="return false;">Help Out Here</a>
+    </div>
+  </section>
+
+</main>
+  <div class="sponsor-logos">
+    <div class="sponsor-scroll">
+      <div class="sponsor-track">
+        <a href="index.html"></a>
+        <a href="https://www.firstforwomen.co.za/"><img src="/images/logo.avif" alt="first for women"></a>
+        <a href="https://meandb.shop/"> <img src="/images/ME_B-logo.avif" alt="Me&B"></a>
+        <a href="https://www.discovery.co.za/"><img src="/images/discovery-logo.webp" alt="Discory"></a>
+        <a href="https://saartjiebaartmancentre.org.za/"><img src="/images/saartjie-baartman-centre.webp" alt="Saartjie Baartman Centre"></a>
+      </div>
+    </div>
+        
+        
+          
+
+    <p>In Dedication Of All The Women Of South Africa</p>
+    <i>Stop The Violence <i class="fa-solid fa-hand-fist"></i></i>
+      
+  </div>
+
+
+
+ <footer>
+    <p>&copy; <a href="https://github.com/KayGee2">2026 Ching Chong Char. All rights reserved.</p></a>
+ </footer>
+<script src="script.js">
+</script>
+</body>
+</html>
