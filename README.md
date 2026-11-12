@@ -92,6 +92,6 @@ In dedication of all the women of South Africa.
 # Author
 # Kagisho Madigwe
 
-In dedication of all the women of South Africa. Stop the violence.
+
 
 Author
